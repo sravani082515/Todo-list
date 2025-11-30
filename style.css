@@ -1,0 +1,114 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.add-task-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.add-task-container input {
+    flex-grow: 1;
+    margin-bottom: 0;
+}
+
+#addTaskBtn {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#addTaskBtn:hover {
+    background-color: #4cae4c;
+}
+
+/* Task List Styling */
+#taskList {
+    list-style: none;
+    padding: 0;
+}
+
+#taskList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 8px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    border-left: 5px solid #007bff;
+    transition: background 0.3s;
+}
+
+.task-text {
+    flex-grow: 1;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Completed Task Visual Indication */
+.completed .task-text {
+    text-decoration: line-through;
+    color: #888;
+    font-style: italic;
+}
+
+.completed {
+    border-left-color: #5cb85c !important; /* Green border for completed */
+    background: #e9ffe9 !important;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #f00;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.delete-btn:hover {
+    color: #c9302c;
+}
+
+/* Hide tasks that don't match the search */
+.hidden {
+    display: none !important;
+}
